@@ -1,5 +1,5 @@
 {
-  "name": "weatherApp",
+  "name": "youtubeAPIApp",
   "description": "",
   "main": "index.js",
   "license": "ISC",
@@ -18,6 +18,5 @@
     "moment": "^2.12.0"
   },
   "authors": [
-    "David <ddiehr@yahoo.com>"
-  ]
+      ]
 }
