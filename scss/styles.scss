@@ -1,0 +1,55 @@
+$gray : #d3d3d3;
+
+#song{
+    font-weight: bold;
+    text-align: center;
+    color: black;
+  }
+#artist{
+      font-weight: bold;
+      text-align: center;
+      color: black;
+    }
+
+#test{
+  color: red;
+}
+
+body{
+  background-color: black;
+}
+// #myIframe{
+// float:left;
+// }
+// #parodyIframe{
+// float:right;
+// }
+// iframe{
+//   display:inline-block;
+// }
+#search-button{
+  float: center;
+}
+.video-container {
+    position: relative;
+    // padding-bottom: 56.25%;
+    padding-top: 35px;
+    // min-height: 500px;
+    overflow: hidden;
+    margin: auto;
+    width: 75%;
+    border: 10px solid red;
+}
+.video-container iframe {
+    display: block;
+    // top:0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container div {
+  height: 500px;
+  width: 100%;
+
+}

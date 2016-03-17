@@ -22,10 +22,6 @@ exports.keyWordsearch = function(){
             console.log(url);
             $('#myIframe').attr('src', url)
 
-
-
-
-                    console.log(str);
                   });
           }
 
@@ -48,10 +44,6 @@ exports.keyWordsearch = function(){
                   console.log(url);
                   $('#parodyIframe').attr('src', url)
 
-
-
-
-                  console.log(str);
           });
           }
 

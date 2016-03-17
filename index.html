@@ -2,81 +2,39 @@
 <html>
 <head>
 <title>Search</title>
-</head>
-<body>
-  <div id="buttons">
-  <label> <input id="song" value='song' type="text"/>
-    <input id="artist" value='artist' type="text"/><button id="search-button">Search</button></label>
-  </div>
-<iframe id="myIframe" width="640" height="400"></iframe>
-<iframe id="parodyIframe" width="640" height="400"></iframe>
 
-    <!-- <script>
-
-
-    function keyWordsearch(){
-      // debugger;
-            gapi.client.setApiKey('AIzaSyCvjqLF84b-96a8p5KeWKutbiqy3f9SsYA');
-            gapi.client.load('youtube', 'v3', function() {
-            makeRequest();
-            makeRequest2();
-
-            });
-    }
-    function makeRequest() {
-            var q = $('#song').val() + $('#artist').val();
-            console.log(q);
-            var request = gapi.client.youtube.search.list({
-             q:q,
-             part:"id",
-             type:"video",
-             fields:"items/id/videoId"
-            });
-            request.execute(function(response) {
-              var str = JSON.stringify(response.items[0].id.videoId);
-              str = str.replace(/[^\w\s]/gi, '')
-              console.log(str);
-              var url = "https://www.youtube.com/embed/" + str+ "?autoplay=1";
-              console.log(url);
-              $('#myIframe').attr('src', url)
-
-
-
-
-              console.log(str);
-            });
-    }
-
-    function makeRequest2() {
-            var q = $('#song').val() + $('#artist').val() + "parody";
-            console.log(q);
-            var request = gapi.client.youtube.search.list({
-             q:q,
-             part:"id",
-             type:"video",
-             fields:"items/id/videoId"
-            });
-            request.execute(function(response) {
-      // debugger;
-            var str = JSON.stringify(response.items[0].id.videoId);
-            str = str.replace(/[^\w\s]/gi, '')
-            console.log(str);
-            var url = "https://www.youtube.com/embed/" + str + "?autoplay=1";
-            console.log(url);
-            $('#parodyIframe').attr('src', url)
-
-
-
-
-            console.log(str);
-    });
-    }
- </script> -->
-
+<script src="build/js/vendor.min.js"></script>
+<script src = "https://www.youtube.com/iframe_api"></script>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"> </script>
- <script type="text/javascript" src="/build/js/app.js">
+ <script type="text/javascript" src="/build/js/app.js"></script>
+ <link rel="stylesheet" href="build/css/vendor.css">
+ <link rel="stylesheet" href="build/css/styles.css">
+</head>
+<body>
+  <div class="container">
 
- </script>
+<h1 id="test">YouTube Parody Comparison</h1>
+  <div id="player">
+
+  </div>
+  <div id="buttons">
+  <label> <input id="song" value='song' type="text"/>
+    <input id="artist" value='artist' type="text"/><br><br><br><button id="search-button" class="btn btn-default">Search</button></label>
+  </div>
+  <div class="video-container">
+
+<div>
+<iframe id="myIframe" allowfullscreen="" frameborder="2"></iframe>
+</div>
+<div>
+<iframe id="parodyIframe" allowfullscreen="" frameborder="2"></iframe>
+</div>
+  </div>
+
+
+
+
+ </div>
 </body>
 </html>
