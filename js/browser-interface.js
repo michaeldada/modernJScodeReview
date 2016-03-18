@@ -1,9 +1,9 @@
-
-var keyWordsearch = require('./../js/search.js').keyWordsearch;
+var apiKey = require('./../.env').apiKey;
+var getRepos = require('./../js/getRepos.js').getRepos;
 
 $(document).ready(function() {
   $('#search-button').click(function() {
-    keyWordsearch();
+    getRepos();
 
   });
 });
